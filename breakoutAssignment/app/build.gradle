@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.test.breakout.breakoutgame"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 7
+        versionName "1.3"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-project.txt'
+        }
+    }
+
+    dependencies {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+        implementation 'com.android.support:appcompat-v7:+'
+
+    }
+}

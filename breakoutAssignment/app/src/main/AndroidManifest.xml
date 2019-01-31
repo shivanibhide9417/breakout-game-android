@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.breakout.breakoutgame">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="BreakOut"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.test.breakout.breakoutgame.GameActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/GameTheme" >
+        </activity>
+        <activity
+            android:name="com.test.breakout.breakoutgame.MainActivity"
+            android:label="BreakOut"
+            android:screenOrientation="sensorPortrait" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="create" android:name=".highScores.create"/>
+        <activity android:label="View Scores" android:name=".highScores.ScoresList"/>
+    </application>
+
+
+</manifest>
